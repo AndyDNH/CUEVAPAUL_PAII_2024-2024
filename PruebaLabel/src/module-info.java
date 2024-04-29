@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Proyecto001 {
+module PruebaLabel {
 }

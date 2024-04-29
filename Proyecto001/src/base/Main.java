@@ -39,25 +39,25 @@ public class Main  extends JFrame implements GLEventListener{
 		GLCapabilities capabilities = new GLCapabilities(profile);
 		
 		// The canvas 
-		final GLCanvas glcanvas = new GLCanvas(capabilities);
-		Render r = new Render();
-		glcanvas.addGLEventListener(r);
-		glcanvas.setSize(400, 400);
+//		final GLCanvas glcanvas = new GLCanvas(capabilities);
+//		Render r = new Render();
+//		glcanvas.addGLEventListener(r);
+//		glcanvas.setSize(400, 400);
 		
-		final FPSAnimator animator = new FPSAnimator(glcanvas, 300,true );
+//		final FPSAnimator animator = new FPSAnimator(glcanvas, 300,true );
 		
 		final JFrame frame = new JFrame ("nehe: Lesson 1");
 		
-		frame.getContentPane().add(glcanvas);
+//		frame.getContentPane().add(glcanvas);
 		
 		//Shutdown
-		frame.addWindowListener(new WindowAdapter(){
-			public void windowClosing(WindowEvent e){
-				if(animator.isStarted())
-					animator.stop();
-				System.exit(0);
-			}
-		});
+//		frame.addWindowListener(new WindowAdapter(){
+//			public void windowClosing(WindowEvent e){
+//				if(animator.isStarted())
+//					animator.stop();
+//				System.exit(0);
+//			}
+//		});
 		
 		frame.setSize(frame.getContentPane().getPreferredSize());
 		/**
@@ -74,22 +74,23 @@ public class Main  extends JFrame implements GLEventListener{
 
 		int windowX = Math.max(0, (screenSize.width - frame.getWidth()) / 2);
 		int windowY = Math.max(0, (screenSize.height - frame.getHeight()) / 2);
+	}
 
-		frame.setLocation(windowX, windowY);
+//		frame.setLocation(windowX, windowY);
 		/**
 				 * 
-				 */
-		frame.setVisible(true);
+//				 */
+//		frame.setVisible(true);
 		/*
 		 * Time to add Button Control
 		 */
-		JPanel p = new JPanel();
-		p.setPreferredSize(new Dimension(0,0));
-		frame.add(p, BorderLayout.SOUTH);
+//		JPanel p = new JPanel();
+//		p.setPreferredSize(new Dimension(0,0));
+//		frame.add(p, BorderLayout.SOUTH);
 		
-		keyBindings(p, frame, r);
-		animator.start();
-	}
+//		keyBindings(p, frame, r);
+//		animator.start();
+//	}
 
 	public void init(GLAutoDrawable drawable) {
 		// TODO Auto-generated method stub
