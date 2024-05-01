@@ -5,36 +5,24 @@ import java.awt.Graphics;
 
 import javax.swing.JFrame;
 
+import Controller.Container;
+import View.Layouts;
+
 public class Main {
 
 	public static void main(String[] args) {
-		Container contain = new Container();
-		contain.draw(new Alien_Ship());
-		contain.draw(new Spaceship());
-		contain.draw(new Ammo());
 		
-		contain.movement(new Alien_Ship());
-		contain.movement(new Spaceship());
-		contain.movement(new Ammo());
 		
-//		JFrame vent  = new JFrame("Espacio inf");
-//
-//		vent.setSize(700,700);
-//		vent.setVisible(true);
-//		vent.setResizable(false);
-//		vent.setLocationRelativeTo(null);
-//		vent.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		JFrame ventana = new JFrame("Galaga");
+		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		ventana.setSize(800, 600);
+        ventana.setLocationRelativeTo(null);
 		Layouts layout = new Layouts();
-		layout.movement();
+		ventana.add(layout);
+		ventana.setVisible(true);
 		
 
 	}
 	
-//	public void paint(Graphics g) {
-//		
-//		g.setColor(Color.GREEN);
-//        g.fillRect(150, 270, 50, 70);
-//	}
 
 }

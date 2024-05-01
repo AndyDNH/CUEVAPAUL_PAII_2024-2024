@@ -11,6 +11,7 @@ public interface IDraw{
 	
 
 
-	public Image draw(int width, int height, Color color );
+	public void draw(Graphics g);
+	public void draw(Graphics g,IDraw drawable);
 	
 }
