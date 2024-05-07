@@ -19,6 +19,7 @@ import interface_package.IMovement;
 
 public class Container  {
 	Spaceship ship = new Spaceship();
+	Ammo bullet = new Ammo();
 	List<Alien_Ship> opponents = new ArrayList<Alien_Ship>();
 	final int SCREEN_WIDTH = 700;
 	final int SCREEN_HEIGHT = 300;
@@ -37,6 +38,7 @@ public class Container  {
 		for (int i = 0; i < opponents.size(); i++) {
 			opponents.get(i).draw(g);
 		}
+		bullet.draw(g);
 				
 	}
 	
@@ -59,6 +61,8 @@ public class Container  {
 	public void drawShoot(Graphics g) {
 		new Ammo().draw(g, ship);
 	}
+	
+	
 
 
 

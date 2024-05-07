@@ -70,7 +70,7 @@ public class Spaceship extends Core_Ship {
 
 
 	@Override
-	public void draw(Graphics g, IDraw drawable) {
+	public void draw(Graphics g, Core_Ship core) {
 		// TODO Auto-generated method stub
 		
 	}

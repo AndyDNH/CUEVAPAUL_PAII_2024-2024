@@ -40,9 +40,9 @@ public class Ammo extends Core_Ship {
 	}
 
 	@Override
-	public void draw(Graphics g, IDraw drawable) {
+	public void draw(Graphics g, Core_Ship core) {
 		g.setColor(Color.WHITE);
-		g.fillOval(((Spaceship)drawable).cord_x[0]+10,((Spaceship) drawable).cord_y[1]-100, 10, 10);
+		g.fillOval(((Spaceship) core).cord_x[0]+10,((Spaceship) core).cord_y[1]-100, 10, 10);
 		
 	}
 
