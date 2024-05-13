@@ -16,7 +16,13 @@ public class Main {
 		try {
 			Connection con = Db_Connection.getConnection();
 			Statement statement = con.createStatement();
-			ResultSet resultSet = statement.executeQuery(sql);
+			ResultSet rs = statement.executeQuery(sql);
+			
+			
+			while (rs.next()) {
+				System.out.println(rs.getString(1)+ "\t"+ rs.getString(2));
+				
+			}
 			
 			
 //			Person person = new Person(3, "David", 50);

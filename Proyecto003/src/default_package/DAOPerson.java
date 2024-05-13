@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import com.mysql.cj.jdbc.DatabaseMetaData;
+
 public class DAOPerson implements IDAO {
 	Connection connection = null;
 	public DAOPerson() throws SQLException {
@@ -24,9 +26,26 @@ public class DAOPerson implements IDAO {
 		ps.close();
 	}
 	
-	public Person readPerson(int id) {
-		return null;
+	public Person readPerson(int id) throws ClassNotFoundException, SQLException {
+		Connection con = Db_Connection.getConnection();
+		PreparedStatement ps = con.prepareStatement("");
+		return  null;
+				
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public void updatePerson(Person person) {
 		
